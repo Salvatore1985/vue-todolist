@@ -48,7 +48,10 @@ div ul li{
     text-shadow: 2px 2px 4px #000000;
 
 }
+div ul li:hover{
+    background: linear-gradient(rgba(176, 192, 206,0.2), rgba(88, 88, 144, 0.979))
 
+}
 div ul li span :hover{
     color: red;
 
