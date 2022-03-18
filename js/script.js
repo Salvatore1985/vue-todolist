@@ -17,11 +17,27 @@ Bonus:
 
 const rott = new Vue(
     {
-        el: "#rott",
-        data: [
+        el: "#root",
+        data: {
+            newElementList: "",
+            todoList: [],
+        },
+        methods: {
+            addTodoElemet(todoContent) {
+                if (todoContent.trim() !== "") {
+                    this.todoList.push(todoContent.trim());
+                    todoContent = "";
+                }
+            },
+            remuveTodoElemet(todoIndex) {
+                if (this.todoList[todoIndex] !== undefined) {
+                    this.todoList.splice(todoIndex, 1);
 
+                }
+            },
 
-        ],
+        }
 
     }
 );
+

@@ -26,28 +26,32 @@
 </head>
 
 <body>
-    <div id="root">
+    <div>
         <!-- header -->
         <header>
             <h1 class="text-center">Inserisci la tua lista della spesa</h1>
         </header>
 
         <!-- main -->
-        <main>
+        <main id="root">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-9 d-flex text-center justify-content-center p-5" id="my-form-list">
-                        <input class="w-75 me-2 rounded-3" type="text"
+                        <input v-model="newElementList" class="w-75 me-2 rounded-3" type="text"
                             placeholder="Inserisci qui l'articolo che vuoi inserire nella lista">
-                        <button class="w-25 ">Inserisci alla lista</button>
+                        <!--Aggiungo una funzione al  @click del bottone  -->
+                        <button @click="addTodoElemet(newElementList)" class="w-25 ">Inserisci alla lista</button>
                     </div>
                     <div class="col-9 d-flex" id="my-todo-list">
                         <ul class="w-100">
-                            <li class="d-flex justify-content-between ">Ciao
-                                <span><i class="fa-solid fa-xmark"></i></span>
+                            <li class="d-flex justify-content-between " v-if="todoList.length >= 1"
+                                v-for="(element , index) in todoList">
+                                {{element}}
+                                <span @click="remuveTodoElemet(index)"><i class="fa-solid fa-xmark"></i></span>
                             </li>
 
-                            <li class="text-center text-danger">Non ci sono elementi nella lista </li>
+                            <li class="text-center text-danger" v-else="">Non ci sono
+                                elementi nella lista </li>
                         </ul>
                     </div>
                 </div>
