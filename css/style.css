@@ -1,0 +1,51 @@
+
+body{
+    font-family: 'Fredoka', sans-serif;
+}
+header{
+    height: 100px;
+    background-color: rgba(104, 104, 158, 0.979);
+    
+    
+}
+main{
+    height: calc(100vh - 100px);
+    background-color:rgba(88, 88, 144, 0.979);
+}
+h1{
+    font-size: 3rem;
+    color: rgb(176, 192, 206);
+    line-height: 100px;
+    text-shadow: 2px 2px 4px #000000;
+    
+}
+div button{
+    background-color: rgb(176, 192, 206);
+    border-radius: 2rem;
+    color: rgba(88, 88, 144, 0.979);
+    
+}
+div#my-form-list{
+    height: 10%;
+    
+}
+div#my-todo-list{
+    overflow: auto;
+    height:550px;
+    padding: 2.5rem;
+  
+}
+
+
+div ul li{
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-bottom: 1px solid rgb(176, 192, 206); 
+    border-radius: 2rem;
+    box-shadow: 5px 5px 2.5px grey;
+    color: rgb(176, 192, 206);
+    text-shadow: 2px 2px 4px #000000;
+
+}
+
