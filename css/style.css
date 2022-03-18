@@ -31,7 +31,7 @@ div#my-form-list{
 }
 div#my-todo-list{
     overflow: auto;
-    height:550px;
+    height:450px;
     padding: 2.5rem;
   
 }
@@ -49,3 +49,7 @@ div ul li{
 
 }
 
+div ul li span :hover{
+    color: red;
+
+}
